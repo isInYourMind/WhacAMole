@@ -6,7 +6,7 @@ namespace HomeScreen
     {
         public override void InstallBindings()
         {
-            
+            Container.BindInterfacesAndSelfTo<HomeScreenManager>().AsSingle().NonLazy();
         }
     }
 }

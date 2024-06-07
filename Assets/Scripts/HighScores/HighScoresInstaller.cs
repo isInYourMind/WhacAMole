@@ -6,7 +6,7 @@ namespace HighScores
     {
         public override void InstallBindings()
         {
-            
+            Container.BindInterfacesAndSelfTo<HighScoresManager>().AsSingle().NonLazy();
         }
     }
 }
