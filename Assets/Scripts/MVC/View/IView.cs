@@ -7,6 +7,5 @@ namespace MVC
         event Action DestroyEvent; 
         void Disable();
         void ApplyModel(IModel model);
-        void SetOpen(State state);
     }
 }

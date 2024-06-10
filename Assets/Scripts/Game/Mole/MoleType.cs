@@ -1,9 +1,10 @@
-namespace Game.Mole
+namespace Game
 {
     public enum MoleType
     {
-        Regular,
-        WithHelmet,
-        WithVikingHelmet
+        Bomb = 0,
+        Regular = 1,
+        WithHelmet = 2,
+        WithVikingHelmet = 3
     }
 }

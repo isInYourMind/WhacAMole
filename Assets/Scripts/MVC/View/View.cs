@@ -45,28 +45,5 @@ namespace MVC
         protected virtual void OnDestroyEvent()
         {
         }
-
-        protected virtual void Close()
-        {
-            Destroy(gameObject);
-        }
-
-        public void SetOpen(State state)
-        {
-            switch (state)
-            {
-                case State.Open:
-                    gameObject.SetActive(true);
-                    _hidden = false;
-                    break;
-                case State.Close:
-                    Close();
-                    break;
-                case State.Hide:
-                    _hidden = true;
-                    gameObject.SetActive(false);
-                    break;
-            }
-        }
     }
 }

@@ -1,7 +1,11 @@
-namespace WindowSystem.Window
+using System;
+using MVC;
+
+namespace WindowSystem
 {
-    public interface IWindowController
+    public interface IWindowController : IController
     {
         WindowLayer CurrentLayer { get; }
+        Action<IWindowController> Closed { get; }
     }
 }

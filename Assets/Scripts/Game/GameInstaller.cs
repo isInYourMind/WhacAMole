@@ -1,3 +1,5 @@
+using Game.Factories;
+using Game.Mapper;
 using Zenject;
 
 namespace Game
@@ -7,6 +9,8 @@ namespace Game
         public override void InstallBindings()
         {
             Container.BindInterfacesAndSelfTo<GameManager>().AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<GameFactory>().AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<GameMapper>().AsSingle().NonLazy();
         }
     }
 }

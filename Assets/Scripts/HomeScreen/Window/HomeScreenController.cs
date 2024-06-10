@@ -1,10 +1,15 @@
-using MVC;
+using System;
 using UnityEngine;
+using WindowSystem;
 
-namespace HomeScreen.Window
+namespace HomeScreen
 {
-    public class HomeScreenController : Controller<HomeScreenView, HomeScreenModel>
+    public class HomeScreenController : WindowController<HomeScreenView, HomeScreenModel>
     {
+        public override WindowLayer CurrentLayer => WindowLayer.Screen;
+        
+        public Action PlayClicked;
+        
         protected override void OnApplyView(HomeScreenView view)
         {
             view.PlayClicked += OnPlayClicked;
@@ -17,6 +22,8 @@ namespace HomeScreen.Window
 
         private void OnPlayClicked()
         {
+            Debug.LogError("Play clicked!");
+            PlayClicked?.Invoke();
         }
     }
 }

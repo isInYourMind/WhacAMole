@@ -1,8 +1,9 @@
 using MVC;
+using WindowSystem;
 
-namespace HomeScreen.Window
+namespace HomeScreen
 {
-    public class HomeScreenModel : Model
+    public class HomeScreenModel : WindowModel<IParameters>
     {
         
     }

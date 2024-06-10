@@ -1,9 +1,8 @@
 using MVC;
 
-namespace WindowSystem.Window
+namespace WindowSystem
 {
-    public class WindowView : View<WindowModel>
+    public class WindowView<TModel> : View<TModel>, IWindowView where TModel : class, IWindowModel, IModel
     {
-        
     }
 }

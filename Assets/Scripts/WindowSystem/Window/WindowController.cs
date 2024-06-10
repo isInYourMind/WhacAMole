@@ -1,18 +1,21 @@
 using System;
 using MVC;
+using UnityEngine;
 
-namespace WindowSystem.Window
+namespace WindowSystem
 {
-    public class WindowController : Controller<WindowView, WindowModel>, IWindowController
+    public class WindowController<TView, TModel> : Controller<TView, TModel>, IWindowController 
+        where TView : Component, IWindowView 
+        where TModel : class, IWindowModel, IModel, new()
     {
         public virtual WindowLayer CurrentLayer => WindowLayer.Popup;
-        public Action<WindowController> Closed;
+        public Action<IWindowController> Closed { get; }
         
-        protected override void OnApplyView(WindowView view)
+        protected override void OnApplyView(TView view)
         {
         }
 
-        protected override void OnCloseView(WindowView view)
+        protected override void OnCloseView(TView view)
         {
             Closed?.Invoke(this);
         }

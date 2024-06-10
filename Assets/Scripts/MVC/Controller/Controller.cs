@@ -3,7 +3,7 @@
 namespace MVC
 {
     public class Controller<TView, TModel> : IController
-        where TView : UnityEngine.Component, IView
+        where TView : Component, IView
         where TModel : class, IModel, new()
     {
         protected TView View { get; private set; }
@@ -22,26 +22,19 @@ namespace MVC
             OnApplyView(View);
         }
 
-        public void Open(IParameters inputData)
+        public void SetParameters(IParameters inputData)
         {
-            View.SetOpen(State.Open);
             Model.SetParameters(inputData);
         }
 
         public void Close()
         {
-            View.SetOpen(State.Close);
             if (View != null)
             {
                 OnCloseView(View);
                 Object.Destroy(View.gameObject);
             }
             View = null;
-        }
-
-        public void Hide()
-        {
-            View.SetOpen(State.Hide);
         }
 
         protected virtual void OnApplyView(TView view)

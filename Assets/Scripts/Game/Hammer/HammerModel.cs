@@ -1,6 +1,6 @@
 using MVC;
 
-namespace Game.Hammer
+namespace Game
 {
     public class HammerModel : Model
     {

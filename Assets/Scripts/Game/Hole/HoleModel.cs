@@ -1,6 +1,6 @@
 using MVC;
 
-namespace Game.Hole
+namespace Game
 {
     public class HoleModel : Model
     {

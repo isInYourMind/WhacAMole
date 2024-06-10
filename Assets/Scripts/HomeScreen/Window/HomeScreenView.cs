@@ -1,11 +1,11 @@
 using System;
-using MVC;
 using UnityEngine;
 using UnityEngine.UI;
+using WindowSystem;
 
-namespace HomeScreen.Window
+namespace HomeScreen
 {
-    public class HomeScreenView : View<HomeScreenModel>
+    public class HomeScreenView : WindowView<HomeScreenModel>
     {
         public Action PlayClicked;
         
