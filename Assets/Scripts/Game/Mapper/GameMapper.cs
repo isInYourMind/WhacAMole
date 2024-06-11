@@ -1,5 +1,4 @@
 using System;
-using Game.Factories;
 using UnityEngine;
 using WindowSystem;
 using Zenject;
@@ -31,10 +30,6 @@ namespace Game.Mapper
             _windowManager.Register<PauseWindowController>(delegate (Transform parent, Action<IWindowView> action)
             {
                 action.Invoke(_gameFactory.CreateGamePauseWindowView(parent));
-            });
-            _windowManager.Register<GameOverWindowController>(delegate (Transform parent, Action<IWindowView> action)
-            {
-                action.Invoke(_gameFactory.CreateGameOverWindowView(parent));
             });
         }
     }

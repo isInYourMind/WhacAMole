@@ -1,6 +1,8 @@
 using Game;
-using HighScores;
+using GameStatistics;
+using HighScore;
 using HomeScreen;
+using Player;
 using Results;
 using WindowSystem;
 using Zenject;
@@ -14,5 +16,7 @@ public class WhacAMoleInstaller : MonoInstaller
         GameInstaller.Install(Container);
         ResultsInstaller.Install(Container);
         HighScoresInstaller.Install(Container);
+        PlayerInstaller.Install(Container);
+        GameStatisticsInstaller.Install(Container);
     }
 }

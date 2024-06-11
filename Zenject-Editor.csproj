@@ -41,10 +41,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets/Plugins/Zenject/Source/Editor/SceneParentLoading/SceneParentAutomaticLoader.cs" />
+    <Compile Include="Assets/Plugins/Zenject/Source/Editor/ZenUnityEditorUtil.cs" />
     <Compile Include="Assets/Plugins/Zenject/Source/Editor/Editors/GameObjectContextEditor.cs" />
     <Compile Include="Assets/Plugins/Zenject/Source/Editor/Editors/RunnableContextEditor.cs" />
     <Compile Include="Assets/Plugins/Zenject/Source/Editor/ZenMenuItems.cs" />
-    <Compile Include="Assets/Plugins/Zenject/Source/Editor/SceneParentLoading/SceneParentAutomaticLoader.cs" />
     <Compile Include="Assets/Plugins/Zenject/Source/Editor/Editors/ProjectContextEditor.cs" />
     <Compile Include="Assets/Plugins/Zenject/Source/Editor/SceneParentLoading/DefaultSceneContractConfig.cs" />
     <Compile Include="Assets/Plugins/Zenject/Source/Editor/Editors/SceneDecoratorContextEditor.cs" />
@@ -54,7 +55,6 @@
     <Compile Include="Assets/Plugins/Zenject/Source/Editor/EditorWindow/ZenjectEditorWindow.cs" />
     <Compile Include="Assets/Plugins/Zenject/Source/Editor/Editors/SceneContextEditor.cs" />
     <Compile Include="Assets/Plugins/Zenject/Source/Editor/Editors/ContextEditor.cs" />
-    <Compile Include="Assets/Plugins/Zenject/Source/Editor/ZenUnityEditorUtil.cs" />
     <None Include="Assets/Plugins/Zenject/Source/Editor/Zenject-Editor.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2021.3.28f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -361,6 +361,9 @@
     </Reference>
     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
       <HintPath>/Users/builder/WhacAMole/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>/Users/builder/WhacAMole/Library/PackageCache/jillejr.newtonsoft.json-for-unity@f2c6cb0981/Plugins/Newtonsoft.Json Editor/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
       <HintPath>/Users/builder/WhacAMole/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>

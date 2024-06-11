@@ -1,7 +1,7 @@
 using UnityEngine;
 using Zenject;
 
-namespace Game.Factories
+namespace Game
 {
     public class GameFactory : IGameFactory
     {
@@ -33,12 +33,7 @@ namespace Game.Factories
             return view;
         }
 
-        public GameOverWindowView CreateGameOverWindowView(Transform parent)
-        {
-            var prefab = Resources.Load<GameOverWindowView>("Prefabs/GameOverWindow");
-            var view = Object.Instantiate(prefab, parent);
-            return view;
-        }
+        
         
         public MoleController GetMole(Transform parent, MoleType moleType)
         {

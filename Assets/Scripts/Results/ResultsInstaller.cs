@@ -6,7 +6,9 @@ namespace Results
     {
         public override void InstallBindings()
         {
-            Container.BindInterfacesAndSelfTo<ResultsInstaller>().AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<ResultsManager>().AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<ResultsFactory>().AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<ResultsMapper>().AsSingle().NonLazy();
         }
     }
 }

@@ -6,7 +6,7 @@ namespace Game
     {
         Action<int> TimeUpdated { get; set; }
         Action<int> TimeStarted { get; set; }
-        Action TimeStopped { get; set; }
+        Action TimeIsOver { get; set; }
         Action GamePaused { get; set; }
         Action GameResumed { get; set; }
         Action SpawnMole { get; set; }
@@ -19,5 +19,6 @@ namespace Game
         void GetPenaltyTime();
         void GetBonusTime();
         void GetRewardScore(MoleType moleType);
+        int CurrentScore { get; }
     }
 }

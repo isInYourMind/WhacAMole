@@ -1,4 +1,4 @@
-namespace HighScores
+namespace HighScore
 {
     public class HighScoresManager
     {

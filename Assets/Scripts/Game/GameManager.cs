@@ -13,11 +13,13 @@ namespace Game
         
         public Action<int> TimeUpdated { get; set; }
         public Action<int> TimeStarted { get; set; }
-        public Action TimeStopped { get; set; }
+        public Action TimeIsOver { get; set; }
         public Action<int> ScoreUpdated { get; set; }
         public Action GamePaused { get; set; }
         public Action GameResumed { get; set; }
         public Action SpawnMole { get; set; }
+
+        public int CurrentScore => _currentScores;
         
         private readonly IWindowManager _windowManager;
 
@@ -74,13 +76,6 @@ namespace Game
             else
             {
                 int bestScores = 0;
-                var gameOverParameters = new GameOverWindowParameters
-                {
-                    PlayerName = "YouLuckyToday",
-                    CurrentScores = _currentScores,
-                    BestScore = bestScores
-                };
-                _windowManager.Open<GameOverWindowController>(gameOverParameters);
                 StopTimer();
             }
         }
@@ -88,7 +83,7 @@ namespace Game
         private void StopTimer()
         {
             _isTimerRunning = false;
-            TimeStopped?.Invoke();
+            TimeIsOver?.Invoke();
         }
 
         public void PauseGame()

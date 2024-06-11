@@ -1,8 +1,8 @@
 using MVC;
 
-namespace Game
+namespace Results
 {
-    public class GameOverWindowParameters : IParameters
+    public class ResultsWindowParameters : IParameters
     {
         public string PlayerName;
         public int CurrentScores;

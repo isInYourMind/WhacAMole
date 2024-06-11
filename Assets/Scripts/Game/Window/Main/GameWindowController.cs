@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Game.Factories;
 using WindowSystem;
 using Zenject;
 using Random = UnityEngine.Random;
@@ -20,7 +19,6 @@ namespace Game
             UpdateGame(Model.Parameters.GameRoundStartTimeSec);
             _gameManager.TimeStarted += UpdateGame;
             _gameManager.TimeUpdated += UpdateGame;
-            _gameManager.TimeStopped += TimeIsUp;
             _gameManager.SpawnMole += SpawnMoles;
             _gameManager.ScoreUpdated += UpdateScore;
             view.PauseClicked += _gameManager.PauseGame;
@@ -33,11 +31,6 @@ namespace Game
         private void UpdateScore(int score)
         {
             View.SetScore(score);
-        }
-
-        private void TimeIsUp()
-        {
-            View.TimeIsUp();
         }
 
         private void UpdateGame(int timeLeft)
@@ -106,7 +99,6 @@ namespace Game
         {
             _gameManager.TimeStarted -= UpdateGame;
             _gameManager.TimeUpdated -= UpdateGame;
-            _gameManager.TimeStopped += TimeIsUp;
             view.PauseClicked -= _gameManager.PauseGame;
             base.OnCloseView(view);
         }

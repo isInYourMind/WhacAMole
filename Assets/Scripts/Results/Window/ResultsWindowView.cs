@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using WindowSystem;
 
-namespace Game
+namespace Results
 {
-    public class GameOverWindowView : WindowView<GameOverWindowModel>
+    public class ResultsWindowView : WindowView<ResultsWindowModel>
     {
         public Action ContinueClicked;
         
@@ -15,7 +15,7 @@ namespace Game
         [SerializeField] private TextMeshProUGUI _bestScore;
         [SerializeField] private Button _continueButton;
         
-        protected override void OnApplyModel(GameOverWindowModel model)
+        protected override void OnApplyModel(ResultsWindowModel model)
         {
             _playerName.text = model.Parameters.PlayerName;
             _score.text = model.Parameters.CurrentScores.ToString();
