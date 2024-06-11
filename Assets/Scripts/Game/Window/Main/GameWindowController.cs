@@ -63,16 +63,16 @@ namespace Game
         private void OnMoleExploded(MoleController mole)
         {
             mole.Close();
-            _gameManager.GetPenaltyTime();
+            _gameManager.AddPenaltyTime();
         }
 
         private void OnMoleKilled(MoleController mole)
         {
             if (mole.Type == MoleType.WithVikingHelmet)
             {
-                _gameManager.GetBonusTime();
+                _gameManager.AddBonusTime();
             }
-            _gameManager.GetRewardScore(mole.Type);
+            _gameManager.AddRewardScore(mole.Type);
             mole.Close();
         }
 

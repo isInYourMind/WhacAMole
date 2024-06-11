@@ -19,7 +19,7 @@ namespace HomeScreen
 
         public void OpenHomeScreen()
         {
-            _homeScreenController = _windowManager.Open<HomeScreenController>(null);
+            _homeScreenController = _windowManager.Open<HomeScreenController>();
             _homeScreenController.PlayClicked += StartGame;
         }
 

@@ -104,19 +104,19 @@ namespace Game
             StopTimer();
         }
 
-        public void GetPenaltyTime()
+        public void AddPenaltyTime()
         {
             _timeLeft = _timeLeft - PENALTY_SEC > 0 ? _timeLeft - PENALTY_SEC : 0;
             TimeUpdated?.Invoke(_timeLeft);
         }
 
-        public void GetBonusTime()
+        public void AddBonusTime()
         {
             _timeLeft += BONUS_SEC;
             TimeUpdated?.Invoke(_timeLeft);
         }
 
-        public void GetRewardScore(MoleType moleType)
+        public void AddRewardScore(MoleType moleType)
         {
             _currentScores += moleType switch
             {

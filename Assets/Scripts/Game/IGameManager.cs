@@ -16,9 +16,9 @@ namespace Game
         void PauseGame();
         void ResumeGame();
         void StopGame();
-        void GetPenaltyTime();
-        void GetBonusTime();
-        void GetRewardScore(MoleType moleType);
+        void AddPenaltyTime();
+        void AddBonusTime();
+        void AddRewardScore(MoleType moleType);
         int CurrentScore { get; }
     }
 }
