@@ -11,14 +11,8 @@ public class WhacAMole : MonoBehaviour
     [Inject] private IWindowManager _windowManager;
     [Inject] private IHomeScreenManager _homeScreenManager;
 
-    public WhacAMole()
-    {
-        
-    }
-
     private void Start()
     {
-        Debug.LogError("WhacAMole started!");
         _windowManager.SetUpLayers(_screenLayer, _popupLayer);
         _homeScreenManager.OpenHomeScreen();
     }

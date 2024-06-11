@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenject-IntegrationTests", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenject-IntegrationTests-Editor", "Zenject-IntegrationTests-Editor.csproj", "{393f98d3-4f97-0b5e-fd3d-a0bd6ca88dd0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC", "MVC.csproj", "{12883560-baea-24ff-865d-10ab7ff9b8fd}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenject-PoolMonitor-Editor", "Zenject-PoolMonitor-Editor.csproj", "{97bafc28-2bcf-f370-a4dc-508f0f95c0b6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenject-UnitTests-Editor", "Zenject-UnitTests-Editor.csproj", "{34bb1539-3533-b76d-9906-a212899b976e}"
@@ -34,6 +36,8 @@ Global
 		{d40f53a7-8d56-6d06-cd74-d93b54f05b1a}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{393f98d3-4f97-0b5e-fd3d-a0bd6ca88dd0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{393f98d3-4f97-0b5e-fd3d-a0bd6ca88dd0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12883560-baea-24ff-865d-10ab7ff9b8fd}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12883560-baea-24ff-865d-10ab7ff9b8fd}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97bafc28-2bcf-f370-a4dc-508f0f95c0b6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{97bafc28-2bcf-f370-a4dc-508f0f95c0b6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34bb1539-3533-b76d-9906-a212899b976e}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

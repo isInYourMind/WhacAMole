@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Newtonsoft.Json;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ namespace GameStatistics
         
         public Dictionary<string, int> GetHighScore => _highScores;
         
-        private readonly Dictionary<string, int> _highScores = new();
+        private Dictionary<string, int> _highScores = new();
 
         public GameStatisticsManager()
         {
@@ -23,6 +24,8 @@ namespace GameStatistics
             {
                 _highScores = FakePlayersStatistic.PlayersStats;
             }
+
+            _highScores = GetSortedDictionary(_highScores);
         }
 
         public int GetBestScoreForPlayer(string playerName)
@@ -39,11 +42,23 @@ namespace GameStatistics
                 {
                     _highScores[playerName] = score;
                 }
+                _highScores = GetSortedDictionary(_highScores);
                 var highScoreStr = JsonConvert.SerializeObject(_highScores);
-                Debug.LogError(highScoreStr);
                 PlayerPrefs.SetString(HIGH_SCORES, highScoreStr);
                 PlayerPrefs.Save();
             }
+        }
+
+        private Dictionary<string, int> GetSortedDictionary(Dictionary<string, int> source)
+        {
+            var sortedEnumerable = from entry in _highScores orderby entry.Value descending select entry;
+            var sortedDictionary = new Dictionary<string, int>();
+            foreach (var keyValuePair in sortedEnumerable)
+            {
+                sortedDictionary.Add(keyValuePair.Key, keyValuePair.Value);
+            }
+
+            return sortedDictionary;
         }
     }
 }

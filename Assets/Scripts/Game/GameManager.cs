@@ -75,7 +75,6 @@ namespace Game
             }
             else
             {
-                int bestScores = 0;
                 StopTimer();
             }
         }

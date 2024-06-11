@@ -99,7 +99,10 @@ namespace Game
         {
             _gameManager.TimeStarted -= UpdateGame;
             _gameManager.TimeUpdated -= UpdateGame;
+            _gameManager.SpawnMole -= SpawnMoles;
+            _gameManager.ScoreUpdated -= UpdateScore;
             view.PauseClicked -= _gameManager.PauseGame;
+            _holes.Clear();
             base.OnCloseView(view);
         }
     }

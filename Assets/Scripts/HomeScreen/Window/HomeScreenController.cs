@@ -1,6 +1,6 @@
-using System;
-using UnityEngine;
+using Game;
 using WindowSystem;
+using Zenject;
 
 namespace HomeScreen
 {
@@ -8,8 +8,8 @@ namespace HomeScreen
     {
         public override WindowLayer CurrentLayer => WindowLayer.Screen;
         
-        public Action PlayClicked;
-        
+        [Inject] private IGameManager _gameManager;
+
         protected override void OnApplyView(HomeScreenView view)
         {
             view.PlayClicked += OnPlayClicked;
@@ -22,8 +22,7 @@ namespace HomeScreen
 
         private void OnPlayClicked()
         {
-            Debug.LogError("Play clicked!");
-            PlayClicked?.Invoke();
+            _gameManager.ShowGameScreen();
         }
     }
 }
